@@ -3,6 +3,8 @@ include("connection.php");
 session_start();
 $user_name = $_SESSION['login_user'];
 $id = isset($_GET['id']) ? $_GET['id'] : '';
+//$choice = $_POST['requestID'];
+//$inputComment = $_POST['review'];
 
 $result = mysqli_query($conn,"SELECT * FROM servicerequest WHERE requestedby = '$user_name' AND status = 'Completed' AND date<=CURDATE()");
 
@@ -34,10 +36,12 @@ $result = mysqli_query($conn,"SELECT * FROM servicerequest WHERE requestedby = '
 					<ul>
 						<li><a href="indexSU.php">Welcome </a></li>
 						<li>
-							<li class="current"><a href="CreateNewRequest.php">Create New Request</a>
+							<li class="current"><a href="ViewRequestsSU.php">Manage Requests</a>
 							<ul>
+								<li><a href="CreateNewRequest.php">Create New Requests</a>
 								<li><a href="ViewRequestsSU.php">View Your Requests</a>
 								<li><a href="ReviewRequestsSU.php">Review Service</a>
+								<li><a href="ViewReviewSU.php">View Your Reviews</a>
 								</li>
 							</ul>
 						<li>
@@ -69,6 +73,7 @@ $result = mysqli_query($conn,"SELECT * FROM servicerequest WHERE requestedby = '
                 <th>Service Type</th>
 								<th>Status</th>
 								<th>Assigned To</th>
+								<th>Reviews</th>
 
                 </tr>";
 								?>
@@ -89,24 +94,7 @@ $result = mysqli_query($conn,"SELECT * FROM servicerequest WHERE requestedby = '
 								  <input type="submit" value="Submit">
 								</form>
 
-								<?php
-                while($row = mysqli_fetch_array($result))
-                {
-                echo "<tr>";
-                echo "<td>" . $row['requestID'] . "</td>";
-                echo "<td>" . $row['date'] . "</td>";
-                echo "<td>" . $row['notes'] . "</td>";
-								echo "<td>" . $row['requestedBy'] . "</td>";
-                echo "<td>" . $row['servicetype'] . "</td>";
-								echo "<td>" . $row['status'] . "</td>";
-								echo "<td>" . $row['assignedTo'] . "</td>";
-								//echo "<td><a href='reviewSU.php?id=".$row['requestID']."'>Review</a>" . $row['review'] . "</td>";
-								//echo "<td>" . $row['review'] . "</td>";
 
-                echo "</tr>";
-                }
-                echo "</table>";
-                ?>
 
 								</div>
 								</div>

@@ -5,20 +5,15 @@ $user_name = $_SESSION['login_user'];
 $id = isset($_GET['id']) ? $_GET['id'] : '';
 $choice = $_POST['requestID'];
 $inputComment = $_POST['review'];
+$sql = "UPDATE servicerequest SET review = '$inputComment' WHERE requestID = $choice";
 
-if(isset($_POST['submit']))
-{
-  $sql = "SELECT * FROM servicerequest WHERE requestID=$choice";
-  $result = mysqli_query($conn,$sql);
-
-   header('refresh:0;url=reviewrequestssu.php');
-     if(mysqli_num_rows($result) > 0){
-       $sql = "UPDATE servicerequest SET review = '$inputComment' WHERE requestID = $choice";
-     }
-
-    echo "<script type='text/javascript'>alert('Your review has been posted!')</script>";
-    mysqli_query($conn, $sql);
-    //mysqli_close($conn);
-
+if (mysqli_query($conn, $sql)){
+  mysqli_close($conn);
+  echo '<script language="javascript">';
+  echo 'alert("Reviewed!")';
+  echo '</script>';
+  echo  "<script> window.location.assign('ReviewRequestsSU.php'); </script>";
+} else {
+  echo "Failed to Review!";
 }
- ?>
+?>

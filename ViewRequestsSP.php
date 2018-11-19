@@ -36,7 +36,6 @@ $result = mysqli_query($conn,"SELECT * FROM servicerequest WHERE status = 'pendi
 							<li class="current"><a href="ViewRequestsSP.php">Manage Requests</a>
 							<ul>
 								<li><a href="ViewAcceptedSP.php">View Accepted Requests</a>
-								<li><a href="ReviewRequestsSU.php">Review Service</a>
 								</li>
 							</ul>
 						<li>

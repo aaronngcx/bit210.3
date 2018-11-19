@@ -28,10 +28,11 @@ $user_name = $_SESSION['login_user'];
 				<!-- Nav -->
 				<nav id="nav">
 					<ul>
-						<li class="current"><a href="index.html">Welcome </a></li>
+						<li class="current"><a href="indexSU.php">Welcome</a>
 						<li>
-							<a href="CreateNewRequest.php">Create New Request</a>
+							<li><a href="ViewRequestsSU.php">Manage Requests</a>
 							<ul>
+								<li><a href="CreateNewRequest.php">Create New Requests</a>
 								<li><a href="ViewRequestsSU.php">View Your Requests</a>
 								<li><a href="ReviewRequestsSU.php">Review Service</a>
 								</li>
@@ -57,7 +58,7 @@ $user_name = $_SESSION['login_user'];
 					</div>
 					<div class="col-5 col-12-medium">
 						<ul>
-							<li><a href="CreateNewRequest.html" class="button large icon fa-arrow-circle-right">Find Elder Care </a></li>
+							<li><a href="CreateNewRequest.php" class="button large icon fa-arrow-circle-right">Find Elder Care </a></li>
 							<li><a href="#" class="button alt large icon fa-question-circle">More info</a></li>
 						</ul>
 					</div>

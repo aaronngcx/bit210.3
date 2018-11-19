@@ -28,13 +28,13 @@ $result = mysqli_query($conn,"SELECT * FROM servicerequest WHERE requestedby = '
 					<span>For The Elderly..</span>
 				</div>
 
-				<!-- Nav -->
 				<nav id="nav">
 					<ul>
 						<li><a href="indexSU.php">Welcome </a></li>
 						<li>
-							<li class="current"><a href="CreateNewRequest.php">Create New Request</a>
+							<li class="current"><a href="ViewRequestsSU.php">Manage Requests</a>
 							<ul>
+								<li><a href="CreateNewRequest.php">Create New Requests</a>
 								<li><a href="ViewRequestsSU.php">View Your Requests</a>
 								<li><a href="ReviewRequestsSU.php">Review Service</a>
 								</li>
@@ -80,7 +80,7 @@ $result = mysqli_query($conn,"SELECT * FROM servicerequest WHERE requestedby = '
                 echo "<td>" . $row['servicetype'] . "</td>";
 								echo "<td>" . $row['status'] . "</td>";
 								echo "<td>" . $row['assignedTo'] . "</td>";
-								echo "<td><a href='deleteSU.php?id=".$row['requestID']."'>Delete</a> <a href='Completed.php?id=".$row['requestID']."'>Completed</a></td>";
+								echo "<td><a href='deleteSU.php?id=".$row['requestID']."'>Delete<br></a> <a href='Completed.php?id=".$row['requestID']."'>Mark as Completed</a></td>";
 
                 echo "</tr>";
                 }

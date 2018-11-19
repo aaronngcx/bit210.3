@@ -1,6 +1,5 @@
 <?php
 include("loginservSU.php");
-//
 session_start();
 $user_name = $_SESSION['login_user'];
 ?>
@@ -34,7 +33,6 @@ $user_name = $_SESSION['login_user'];
 							<li><a href="ViewRequestsSP.php">Manage Requests</a>
 							<ul>
 								<li><a href="ViewAcceptedSP.php">View Accepted Requests</a>
-								<li><a href="ReviewRequestsSU.php">Review Service</a>
 								</li>
 							</ul>
 						<li>
@@ -58,7 +56,7 @@ $user_name = $_SESSION['login_user'];
 					</div>
 					<div class="col-5 col-12-medium">
 						<ul>
-							<li><a href="CreateNewRequest.html" class="button large icon fa-arrow-circle-right">Find Elder Care </a></li>
+							<li><a href="ViewRequestsSP.php" class="button large icon fa-arrow-circle-right">Find Elder Care Jobs </a></li>
 							<li><a href="#" class="button alt large icon fa-question-circle">More info</a></li>
 						</ul>
 					</div>

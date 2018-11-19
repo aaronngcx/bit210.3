@@ -34,7 +34,7 @@ $_SESSION['login_user']=$name;
 						<li class="current"><a href="index.html">Welcome</a></li>
 						<li>
 						<li>
-							<a href="LoginSU.php">Login/Sign Up</a>
+								<a> Login/SignUp </a>
 							<ul>
 								<li><a href="loginSU.php">Login As Senior User</a></li>
 								<li><a href="loginSP.php">Login As Service Provider</a></li>
