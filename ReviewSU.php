@@ -12,7 +12,7 @@ if (mysqli_query($conn, $sql)){
   echo '<script language="javascript">';
   echo 'alert("Reviewed!")';
   echo '</script>';
-  echo  "<script> window.location.assign('ReviewRequestsSU.php'); </script>";
+  echo  "<script> window.location.assign('ViewReviewSU.php'); </script>";
 } else {
   echo "Failed to Review!";
 }

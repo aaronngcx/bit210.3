@@ -37,6 +37,7 @@ $result = mysqli_query($conn,"SELECT * FROM servicerequest WHERE requestedby = '
 								<li><a href="CreateNewRequest.php">Create New Requests</a>
 								<li><a href="ViewRequestsSU.php">View Your Requests</a>
 								<li><a href="ReviewRequestsSU.php">Review Service</a>
+								<li><a href="ViewReviewSU.php">View Your Reviews</a>
 								</li>
 							</ul>
 						<li>

@@ -81,7 +81,7 @@ $result = mysqli_query($conn,"SELECT * FROM servicerequest WHERE requestedby = '
 									<select name="requestID" class="form-control">
 									<option value="choice">Choose Service Session</option>
 									<?php
-									$sql = mysqli_query($conn, "SELECT requestID From servicerequest");
+									$sql = mysqli_query($conn, "SELECT requestID From servicerequest WHERE requestedby = '$user_name'");
 									$row = mysqli_num_rows($sql);
 									while ($row = mysqli_fetch_array($sql)){
 									echo "<option value='". $row['requestID'] ."'>" .$row['requestID'] ."</option>" ;
@@ -89,8 +89,8 @@ $result = mysqli_query($conn,"SELECT * FROM servicerequest WHERE requestedby = '
 									?>
 
 									</select>
-								  Comments:<br>
-								  <input type="text" name="review" id="review" value=""><br>
+								  Rating:<br>
+									<input type="number" name="review" id="review" min="1" max="5">
 								  <input type="submit" value="Submit">
 								</form>
 
