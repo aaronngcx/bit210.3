@@ -81,7 +81,7 @@ if(isset($_POST['signup']))
 					<label for="userName"><b>User Name</b>
 					<input type="text" placeholder="Enter User Name" name="user_name" required>
 					<label for="psw"><b>Password</b>
-					<input type="password" placeholder="Enter Password" name="password" required>
+					<input type="password" placeholder="Enter Password " name="pw" pattern=".{6,}" title="Six or more characters">
 					<label for="fullName"><b>Full Name</b>
 					<input type="text" placeholder="Enter Full Name" name="fullName" required>
 					<label for="mobileNumber"><b>Mobile Number</b>

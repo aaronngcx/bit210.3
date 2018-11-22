@@ -91,7 +91,8 @@ $result = mysqli_query($conn,"SELECT * FROM servicerequest WHERE requestedby = '
 									</select>
 								  Rating:<br>
 									<input type="number" name="review" id="review" min="1" max="5">
-								  <input type="submit" value="Submit">
+									<br>
+								  <center><input type="submit" value="Submit"><center>
 								</form>
 
 
